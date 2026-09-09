@@ -51,32 +51,32 @@ domus/
 │
 └── README.md
 
-DOMUS
+domus/
 │
-├── 👤 PESSOA 1 — HOME
-│   ├── index.html
-│   ├── css/home.css
-│   └── js/main.js
+├── index.html              # 👤 Pessoa 1
+├── sobre.html              # 👤 Pessoa 2
+├── projetos.html           # 👤 Pessoa 3
+├── contato.html            # 👤 Pessoa 4
 │
-├── 👤 PESSOA 2 — SOBRE + DESIGN
-│   ├── sobre.html
-│   ├── css/style.css
-│   ├── css/sobre.css
-│   └── data/empresa.json
+├── css/
+│   ├── style.css           # 👤 Pessoa 2
+│   ├── header.css          # 👤 Pessoa 1
+│   ├── footer.css          # 👤 Pessoa 2
+│   ├── home.css            # 👤 Pessoa 1
+│   ├── sobre.css           # 👤 Pessoa 2
+│   ├── projetos.css        # 👤 Pessoa 3
+│   └── contato.css         # 👤 Pessoa 4
 │
-├── 👤 PESSOA 3 — PROJETOS + JSON
-│   ├── projetos.html
-│   ├── css/projetos.css
-│   ├── js/projetos.js
-│   └── data/projetos.json
+├── js/
+│   ├── main.js             # 👤 Pessoa 1
+│   ├── menu.js             # 👤 Pessoa 1
+│   ├── projetos.js         # 👤 Pessoa 3
+│   ├── contato.js          # 👤 Pessoa 4
+│   └── animacoes.js        # 👤 Pessoa 4
 │
-└── 👤 PESSOA 4 — CONTATO + COMPONENTES
-    ├── contato.html
-    ├── css/contato.css
-    ├── css/header.css
-    ├── css/footer.css
-    ├── js/menu.js
-    ├── js/contato.js
-    ├── js/animacoes.js
-    └── data/contatos.json
-
+├── data/
+│   ├── projetos.json       # 👤 Pessoa 3
+│   ├── contatos.json       # 👤 Pessoa 4
+│   └── empresa.json        # 👤 Pessoa 2
+│
+└── assets/                 # 👤 Pessoa 4
