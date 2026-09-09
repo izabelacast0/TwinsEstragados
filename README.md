@@ -53,7 +53,10 @@ domus/
 
 domus/
 │
-├── index.html              # 👤 Pessoa 1
+├── index.html              # 👤 Pessoa 1 recuperar senha, cadastro de usuários,  login via javascript e apresentar um os indexs da intranet. 
+
+Deve-se ter um index da intranet para cada perfil de usuário.
+
 ├── sobre.html              # 👤 Pessoa 2
 ├── projetos.html           # 👤 Pessoa 3
 ├── contato.html            # 👤 Pessoa 4
