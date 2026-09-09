@@ -50,3 +50,33 @@ domus/
 │   └── icons/
 │
 └── README.md
+
+DOMUS
+│
+├── 👤 PESSOA 1 — HOME
+│   ├── index.html
+│   ├── css/home.css
+│   └── js/main.js
+│
+├── 👤 PESSOA 2 — SOBRE + DESIGN
+│   ├── sobre.html
+│   ├── css/style.css
+│   ├── css/sobre.css
+│   └── data/empresa.json
+│
+├── 👤 PESSOA 3 — PROJETOS + JSON
+│   ├── projetos.html
+│   ├── css/projetos.css
+│   ├── js/projetos.js
+│   └── data/projetos.json
+│
+└── 👤 PESSOA 4 — CONTATO + COMPONENTES
+    ├── contato.html
+    ├── css/contato.css
+    ├── css/header.css
+    ├── css/footer.css
+    ├── js/menu.js
+    ├── js/contato.js
+    ├── js/animacoes.js
+    └── data/contatos.json
+
