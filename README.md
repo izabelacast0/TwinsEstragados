@@ -1,4 +1,4 @@
-# DOMUS — Mobiliária / Arquitetura
+# DOMUS — Imobiliária
 
 Site institucional da DOMUS, desenvolvido para apresentar a marca,
 seus projetos, informações institucionais e formas de contato.
