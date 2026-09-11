@@ -1,4 +1,4 @@
-# DOMUS — Imobiliária
+# DOMUS — Imobiliária 
 
 Site institucional da DOMUS, desenvolvido para apresentar a marca,
 seus projetos, informações institucionais e formas de contato.
@@ -53,33 +53,33 @@ domus/
 
 domus/
 │
-├── index.html              # 👤 Pessoa 1 recuperar senha, cadastro de usuários,  login via javascript e apresentar um os indexs da intranet. 
+├── index.html              # 🐒 Izabela recuperar senha, cadastro de usuários,  login via javascript e apresentar um os indexs da intranet. 
 
 Deve-se ter um index da intranet para cada perfil de usuário.
 
-├── sobre.html              # 👤 Pessoa 2
-├── projetos.html           # 👤 Pessoa 3
-├── contato.html            # 👤 Pessoa 4
+├── sobre.html              # ✊🏿 Miguel
+├── projetos.html           # ⁶🤷🏻‍♀️⁷ Isabela
+├── contato.html            # 🍜 Daniel
 │
 ├── css/
-│   ├── style.css           # 👤 Pessoa 2
-│   ├── header.css          # 👤 Pessoa 1
-│   ├── footer.css          # 👤 Pessoa 2
-│   ├── home.css            # 👤 Pessoa 1
-│   ├── sobre.css           # 👤 Pessoa 2
-│   ├── projetos.css        # 👤 Pessoa 3
-│   └── contato.css         # 👤 Pessoa 4
+│   ├── style.css           # ✊🏿 Miguel
+│   ├── header.css          # 🐒 Izabela
+│   ├── footer.css          # ✊🏿 Miguel
+│   ├── home.css            # 🐒 Izabela
+│   ├── sobre.css           # ✊🏿 Miguel
+│   ├── projetos.css        # ⁶🤷🏻‍♀️⁷ Isabela
+│   └── contato.css         # 🍜 Daniel
 │
 ├── js/
-│   ├── main.js             # 👤 Pessoa 1
-│   ├── menu.js             # 👤 Pessoa 1
-│   ├── projetos.js         # 👤 Pessoa 3
-│   ├── contato.js          # 👤 Pessoa 4
-│   └── animacoes.js        # 👤 Pessoa 4
+│   ├── main.js             # 🐒 Izabela
+│   ├── menu.js             # 🐒 Izabela
+│   ├── projetos.js         # ⁶🤷🏻‍♀️⁷ Isabela
+│   ├── contato.js          # 🍜 Daniel
+│   └── animacoes.js        # 🍜 Daniel
 │
 ├── data/
-│   ├── projetos.json       # 👤 Pessoa 3
-│   ├── contatos.json       # 👤 Pessoa 4
-│   └── empresa.json        # 👤 Pessoa 2
+│   ├── projetos.json       # ⁶🤷🏻‍♀️⁷ Isabela
+│   ├── contatos.json       # 🍜 Daniel
+│   └── empresa.json        # ✊🏿 Miguel
 │
-└── assets/                 # 👤 Pessoa 4
+└── assets/                 # 🍜 Daniel
