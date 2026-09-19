@@ -1,0 +1,126 @@
+/* =====================================================================
+   FOOTER.CSS — Rodapé do site (Miguel)
+   Reescrito para usar a paleta verde/creme oficial (antes usava
+   variáveis --primary/--secondary de um design azul/dourado
+   abandonado, incompatível com o restante do site).
+   ===================================================================== */
+
+footer{
+  background:var(--dark);
+  color:#cfd8c4;
+  padding:4rem 30px 0;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.5fr;
+  gap:3rem;
+  padding-bottom:3rem;
+  border-bottom:1px solid rgba(255,245,185,.15);
+}
+
+/* Coluna da marca */
+.footer-brand .logo-text{
+  color:var(--cream);
+  font-family:Georgia, serif;
+  font-size:22px;
+}
+.footer-brand p{
+  font-size:.92rem;
+  line-height:1.8;
+  margin:1rem 0 1.5rem;
+  color:#b7c2a9;
+}
+
+.social-links{
+  display:flex;
+  gap:.75rem;
+  flex-wrap:wrap;
+}
+.social-links a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  background:rgba(255,255,255,.06);
+  border-radius:50%;
+  color:var(--cream);
+  font-size:1rem;
+  transition:all var(--transition);
+  border:1px solid rgba(255,245,185,.15);
+}
+.social-links a:hover{
+  background:var(--cream);
+  color:var(--dark);
+  border-color:var(--cream);
+  transform:translateY(-3px);
+}
+
+/* Colunas de links */
+.footer-col h4{
+  font-size:1rem;
+  font-weight:700;
+  color:var(--cream);
+  margin-bottom:1.25rem;
+  position:relative;
+  padding-bottom:.5rem;
+}
+.footer-col h4::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:30px;
+  height:2px;
+  background:var(--cream);
+  border-radius:2px;
+}
+.footer-col ul li{ margin-bottom:.6rem; }
+.footer-col ul li a{
+  color:#b7c2a9;
+  font-size:.9rem;
+  transition:color var(--transition), padding-left var(--transition);
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+}
+.footer-col ul li a:hover{
+  color:var(--cream);
+  padding-left:4px;
+}
+
+/* Contato */
+.footer-contact li{
+  display:flex;
+  align-items:flex-start;
+  gap:.75rem;
+  margin-bottom:.85rem;
+  color:#b7c2a9;
+  font-size:.9rem;
+}
+.footer-contact li i{
+  color:var(--cream);
+  flex-shrink:0;
+  margin-top:2px;
+  width:16px;
+  text-align:center;
+}
+
+/* Barra inferior */
+.footer-bottom{
+  padding:1.25rem 0;
+  text-align:center;
+  font-size:.85rem;
+  color:#8a9a7c;
+}
+.footer-bottom span{ color:var(--cream); }
+
+/* Responsivo */
+@media (max-width:992px){
+  .footer-grid{ grid-template-columns:1fr 1fr; gap:2rem; }
+}
+@media (max-width:600px){
+  .footer-grid{ grid-template-columns:1fr; gap:1.5rem; }
+  footer{ padding:3rem 20px 0; }
+}
