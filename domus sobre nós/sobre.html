@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre a Domus</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap');
+:root{
+  --green:#7a9257;
+  --dark:#2c481c;
+  --cream:#f6f0b8;
+  --ink:#20251c;
+  --line:rgba(255,245,185,.45)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050605;color:var(--cream);font-family:Montserrat,Arial,sans-serif}.site{width:min(100%,1440px);margin:8px auto 0;background:var(--green);overflow:hidden;box-shadow:0 0 0 1px #000}
+a{color:inherit;text-decoration:none}.topbar{height:74px;background:var(--green);display:flex;align-items:center;padding:0 30px;gap:34px}.brand{display:flex;align-items:center;gap:10px;min-width:160px;font-family:Georgia,serif;font-size:25px;letter-spacing:-1px}.brand-mark{width:33px;height:30px;position:relative;border:1.5px solid var(--cream);border-top:0;transform:skewY(-8deg);opacity:.8}.brand-mark:before{content:"";position:absolute;left:5px;top:-9px;width:21px;height:21px;border-left:1.5px solid var(--cream);border-top:1.5px solid var(--cream);transform:rotate(45deg)}.brand-mark:after{content:"";position:absolute;left:15px;top:8px;height:21px;border-left:1px solid var(--cream)}.brand span{color:var(--cream)}.nav{display:flex;align-items:center;gap:38px;font-size:10px;text-transform:uppercase;letter-spacing:.03em;flex:1}.nav a{opacity:.9}.nav a:hover{text-decoration:underline}.client{height:74px;background:var(--cream);color:#20251c;display:flex;align-items:center;justify-content:center;gap:30px;padding:0 34px;margin-left:auto;min-width:255px;font-size:11px;text-transform:uppercase}.hamb{border:0;background:none;font-size:21px;cursor:pointer;color:inherit}.hero{display:grid;grid-template-columns:39% 61%;min-height:445px}.copy{padding:27px 40px 35px 30px;position:relative;background:var(--green);background-image:radial-gradient(rgba(255,245,185,.12) .6px,transparent .6px);background-size:5px 5px}.crumb{font-size:9px;text-transform:uppercase;margin-bottom:38px;opacity:.95}.copy h1{font-family:'Barlow Condensed',sans-serif;font-size:65px;line-height:.86;letter-spacing:-1px;text-transform:uppercase;margin:0 0 15px;font-weight:800}.copy h1 strong{display:block;color:var(--ink)}.subtitle{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;margin-bottom:14px}.copy p{max-width:310px;font-family:Georgia,serif;font-size:13px;line-height:1.45;color:#f6efb5;margin:0 0 20px}.history-link{display:inline-flex;align-items:center;gap:25px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;margin-top:3px}.history-link span{font-size:22px;font-weight:400}.side-word{position:absolute;left:9px;bottom:40px;writing-mode:vertical-rl;transform:rotate(180deg);font-size:9px;letter-spacing:2px;text-transform:uppercase;opacity:.7}.photo{min-height:445px;background-image:linear-gradient(90deg,rgba(255,245,185,.04),transparent),url('css/imagem_fundo.png');background-size:cover;background-position:center}.stats{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr 1fr;background:var(--dark);min-height:145px}.values-title{grid-column:1/-1;display:none}.values{background:var(--green);padding:17px 30px 20px;border-top:1px solid var(--line)}.values h2{font-family:'Barlow Condensed',sans-serif;font-size:15px;text-transform:uppercase;margin:0 0 14px}.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.value{padding-right:14px;border-right:1px solid var(--line)}.value:last-child{border:0}.value small{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700}.value h3{font-family:'Barlow Condensed',sans-serif;font-size:12px;text-transform:uppercase;margin:4px 0 8px}.value p{font-family:Georgia,serif;font-size:11px;line-height:1.35;margin:0;color:#e9e3a8}.numbers{display:grid;grid-template-columns:repeat(3,1fr);grid-column:2/-1;background:var(--dark);padding:20px 25px;gap:20px}.number{border-right:1px solid rgba(255,245,185,.4);padding-right:15px}.number:last-child{border:0}.number strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:28px;line-height:1;font-weight:700}.number span{display:block;font-family:'Barlow Condensed',sans-serif;font-size:12px;line-height:1.15;text-transform:uppercase;margin-top:9px}.mobile-menu{display:none}
+@media(max-width:900px){.topbar{padding:0 18px;gap:15px}.brand{min-width:auto;font-size:21px}.nav{gap:16px}.client{min-width:170px;padding:0 15px}.hero{grid-template-columns:1fr}.copy{padding:25px 28px 35px}.copy h1{font-size:58px}.photo{min-height:340px}.stats{display:block}.values{padding:20px}.numbers{padding:22px 20px}}
+@media(max-width:620px){.topbar{height:65px}.nav,.client{display:none}.topbar:after{content:'☰';margin-left:auto;font-size:24px;color:var(--cream)}.hero{display:flex;flex-direction:column}.copy{min-height:400px;padding:23px 24px 35px}.crumb{margin-bottom:35px}.copy h1{font-size:58px}.copy p{font-size:12px}.photo{min-height:270px;background-position:center}.value-grid{grid-template-columns:1fr 1fr;gap:18px}.value{border-right:0;border-bottom:1px solid var(--line);padding-bottom:15px}.numbers{grid-template-columns:1fr 1fr 1fr;gap:12px;padding:18px 15px}.number strong{font-size:23px}.number span{font-size:10px}}
+</style>
+</head>
+<body>
+<div class="site">
+<header class="topbar">
+ <a href="#" class="logo">
+    <img src="css/logo.png" alt="DOMUS">
+</a>
+  <nav class="nav" aria-label="Navegação principal">
+    <a href="#comparar">Comparar</a><a href="#alugar">Alugar</a><a href="#anunciar">Anunciar imóvel</a><a href="#sobre">Sobre</a>
+  </nav>
+  <div class="client">Área do cliente <button class="hamb" aria-label="Abrir menu">☰</button></div>
+</header>
+<main id="sobre">
+<section class="hero">
+  <div class="copy">
+    <div class="crumb">Home&nbsp;&nbsp; / &nbsp;&nbsp;Sobre a Domus</div>
+    <h1>Sobre <strong>a Domus.</strong></h1>
+    <div class="subtitle">Muito além de paredes.</div>
+    <p>Acreditamos que imóveis vão além da função. São espaços que carregam histórias, promovem encontros e transformam a forma como vivemos a cidade.</p>
+    <p>Na Domus, unimos curadoria, estética e autenticidade para conectar pessoas a lugares que fazem sentido.</p>
+    <a class="history-link" href="#historia">Conheça nossa história <span>→</span></a>
+    <div class="side-word">Arquitetura&nbsp;&nbsp;&nbsp; Estética&nbsp;&nbsp;&nbsp; Conexão</div>
+  </div>
+  <div class="photo" role="img" aria-label="Casa de arquitetura contemporânea com detalhes amarelos"></div>
+</section>
+<section class="stats">
+  <div class="values" id="historia">
+    <h2>Nossos valores</h2>
+    <div class="value-grid">
+      <article class="value"><small>01.</small><h3>Autenticidade</h3><p>Selecionamos imóveis com história e identidade própria.</p></article>
+      <article class="value"><small>02.</small><h3>Estética</h3><p>Valorizamos arquitetura, design e o impacto visual dos espaços.</p></article>
+      <article class="value"><small>03.</small><h3>Conexão</h3><p>Acreditamos em relações transparentes e atendimento próximo.</p></article>
+      <article class="value"><small>04.</small><h3>Solidez</h3><p>Segurança em cada etapa para decisões confiantes.</p></article>
+    </div>
+  </div>
+  <div class="numbers">
+    <div class="number"><strong>+8</strong><span>Anos de<br>experiência</span></div>
+    <div class="number"><strong>+320</strong><span>Imóveis<br>selecionados</span></div>
+    <div class="number"><strong>+2.1K</strong><span>Clientes<br>atendidos</span></div>
+  </div>
+</section>
+</main>
+</div>
+</body>
+</html>
