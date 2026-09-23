@@ -338,7 +338,6 @@ footer{background:var(--escuro);color:#cfd8c4;padding:2.4rem 30px 0}
 
 </div>
 
-<!-- MENU DA ÁREA DO CLIENTE -->
 <div class="menu-overlay" id="menuOverlay"></div>
 
 <aside class="side-menu" id="sideMenu">
@@ -359,7 +358,9 @@ footer{background:var(--escuro);color:#cfd8c4;padding:2.4rem 30px 0}
         <a href="#"><i class="fa-solid fa-gear"></i> CONFIGURAÇÕES</a>
     </nav>
 
-    <button class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> SAIR</button>
+    <button class="logout" onclick="if(confirm('Deseja realmente sair?')) window.location.href='index.html'">
+    <i class="fa-solid fa-arrow-right-from-bracket"></i> SAIR
+</button>
 </aside>
 
 <script>
