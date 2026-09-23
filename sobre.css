@@ -1,0 +1,203 @@
+/* =====================================================================
+   SOBRE.CSS — Estilos da página "Sobre a Domus" (Miguel)
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns:39% 61%;
+  min-height:445px;
+}
+
+.copy{
+  padding:27px 40px 35px 30px;
+  position:relative;
+  background:var(--green);
+  background-image:radial-gradient(rgba(255,245,185,.12) .6px, transparent .6px);
+  background-size:5px 5px;
+}
+
+.crumb{
+  font-size:9px;
+  text-transform:uppercase;
+  margin-bottom:38px;
+  opacity:.95;
+}
+
+.copy h1{
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:65px;
+  line-height:.86;
+  letter-spacing:-1px;
+  text-transform:uppercase;
+  margin:0 0 15px;
+  font-weight:800;
+}
+.copy h1 strong{
+  display:block;
+  color:var(--ink);
+}
+
+.subtitle{
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.copy p{
+  max-width:310px;
+  font-family:Georgia, serif;
+  font-size:13px;
+  line-height:1.45;
+  color:#f6efb5;
+  margin:0 0 20px;
+}
+
+.history-link{
+  display:inline-flex;
+  align-items:center;
+  gap:25px;
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  margin-top:3px;
+}
+.history-link span{
+  font-size:22px;
+  font-weight:400;
+}
+
+.side-word{
+  position:absolute;
+  left:9px;
+  bottom:40px;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:.7;
+}
+
+/* Foto de fundo — CORRIGIDO: sintaxe de url() válida e caminho certo
+   (a imagem agora mora em assets/img/banners/, conforme o README) */
+.photo{
+  min-height:445px;
+  background-image:
+    linear-gradient(90deg, rgba(255,245,185,.04), transparent),
+    url('../assets/img/banners/imagem_fundo.png');
+  background-size:cover;
+  background-position:center;
+}
+
+/* Valores + números */
+.stats{
+  display:grid;
+  grid-template-columns:1.8fr 1fr 1fr 1fr 1fr 1fr;
+  background:var(--dark);
+  min-height:145px;
+}
+
+.values{
+  background:var(--green);
+  padding:17px 30px 20px;
+  border-top:1px solid var(--line);
+}
+.values h2{
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:15px;
+  text-transform:uppercase;
+  margin:0 0 14px;
+}
+
+.value-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:18px;
+}
+.value{
+  padding-right:14px;
+  border-right:1px solid var(--line);
+}
+.value:last-child{
+  border:0;
+}
+.value small{
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:10px;
+  font-weight:700;
+}
+.value h3{
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  margin:4px 0 8px;
+}
+.value p{
+  font-family:Georgia, serif;
+  font-size:11px;
+  line-height:1.35;
+  margin:0;
+  color:#e9e3a8;
+}
+
+.numbers{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-column:2 / -1;
+  background:var(--dark);
+  padding:20px 25px;
+  gap:20px;
+}
+.number{
+  border-right:1px solid rgba(255,245,185,.4);
+  padding-right:15px;
+}
+.number:last-child{
+  border:0;
+}
+.number strong{
+  display:block;
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:28px;
+  line-height:1;
+  font-weight:700;
+}
+.number span{
+  display:block;
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:12px;
+  line-height:1.15;
+  text-transform:uppercase;
+  margin-top:9px;
+}
+
+/* Responsivo */
+@media (max-width:900px){
+  .hero{ grid-template-columns:1fr; }
+  .copy{ padding:25px 28px 35px; }
+  .copy h1{ font-size:58px; }
+  .photo{ min-height:340px; }
+  .stats{ display:block; }
+  .values{ padding:20px; }
+  .numbers{ padding:22px 20px; }
+}
+
+@media (max-width:620px){
+  .hero{ display:flex; flex-direction:column; }
+  .copy{ min-height:400px; padding:23px 24px 35px; }
+  .crumb{ margin-bottom:35px; }
+  .copy h1{ font-size:58px; }
+  .copy p{ font-size:12px; }
+  .photo{ min-height:270px; background-position:center; }
+  .value-grid{ grid-template-columns:1fr 1fr; gap:18px; }
+  .value{ border-right:0; border-bottom:1px solid var(--line); padding-bottom:15px; }
+  .numbers{ grid-template-columns:1fr 1fr 1fr; gap:12px; padding:18px 15px; }
+  .number strong{ font-size:23px; }
+  .number span{ font-size:10px; }
+}

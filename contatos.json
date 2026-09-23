@@ -1,0 +1,27 @@
+{
+  "informacoes": {
+    "endereco": {
+      "logradouro": "Av. João Naves de Ávila",
+      "cidade": "Uberlândia",
+      "uf": "MG"
+    },
+    "contato": {
+      "telefone": "(34) 3333-3333",
+      "email": "contato@domus.com"
+    },
+    "horario": {
+      "dias": "Segunda à Sexta",
+      "periodo": "08h às 18h"
+    },
+    "redes_sociais": [
+      { "nome": "Instagram", "url": "#" },
+      { "nome": "Facebook", "url": "#" },
+      { "nome": "LinkedIn", "url": "#" }
+    ]
+  },
+  "estatisticas": [
+    { "valor": 8, "sufixo": "+", "rotulo": "ANOS DE EXPERIÊNCIA" },
+    { "valor": 320, "sufixo": "+", "rotulo": "IMÓVEIS SELECIONADOS" },
+    { "valor": "2.1K", "sufixo": "+", "rotulo": "CLIENTES ATENDIDOS" }
+  ]
+}

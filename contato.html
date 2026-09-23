@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Domus Imobiliária</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos do projeto -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <style>
+    .contato-wrapper {
+      padding: 50px 30px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .contato-info-box {
+      background: var(--dark);
+      padding: 35px;
+      border: 1px solid var(--line);
+    }
+
+    .contato-info-box h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 38px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: var(--cream);
+    }
+
+    .contato-info-box p {
+      font-size: 13px;
+      color: #e9e3a8;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .contato-lista {
+      list-style: none;
+    }
+
+    .contato-lista li {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 13px;
+      color: var(--cream);
+      margin-bottom: 18px;
+    }
+
+    .contato-lista i {
+      font-size: 16px;
+      color: var(--cream);
+    }
+
+    .contato-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field-group label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .field-group input,
+    .field-group textarea {
+      padding: 12px 15px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--line);
+      color: var(--cream);
+      font-family: inherit;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .field-group input:focus,
+    .field-group textarea:focus {
+      border-color: var(--cream);
+    }
+
+    .btn-submit {
+      align-self: flex-start;
+      background: var(--cream);
+      color: var(--ink);
+      border: none;
+      padding: 12px 30px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      letter-spacing: 0.8px;
+      transition: background 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #ffffff;
+    }
+
+    @media (max-width: 800px) {
+      .contato-wrapper {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site">
+    <!-- Header -->
+    <header class="topbar">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo/logo.png" alt="DOMUS">
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html#comparar">Comparar</a>
+        <a href="index.html#alugar">Alugar</a>
+        <a href="index.html#anunciar">Anunciar imóvel</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+      <div class="client">
+        Área do cliente 
+        <button class="hamb" aria-label="Abrir menu">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="contato-wrapper">
+        <div class="contato-info-box">
+          <h1>Fale Conosco</h1>
+          <p>Dúvidas, agendamentos de visita ou anúncios? Envie uma mensagem para a nossa equipa.</p>
+
+          <ul class="contato-lista">
+            <li><i class="fa-solid fa-location-dot"></i> Av. Paulista, 1500 — São Paulo/SP</li>
+            <li><i class="fa-solid fa-phone"></i> (11) 3000-1234</li>
+            <li><i class="fa-solid fa-envelope"></i> contato@domusimobiliaria.com.br</li>
+            <li><i class="fa-solid fa-clock"></i> Seg. a Sex. das 08h às 18h</li>
+          </ul>
+        </div>
+
+        <form class="contato-form" action="#" method="POST">
+          <div class="field-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite o seu nome">
+          </div>
+
+          <div class="field-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+          </div>
+
+          <div class="field-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva a sua mensagem..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="logo-text">DOMUS</div>
+          <p>A Domus Imobiliária é especializada em compra, venda e locação de imóveis residenciais e comerciais, com mais de 14 anos de experiência no mercado.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Horário</h4>
+          <ul>
+            <li>Segunda a Sexta: 08h às 18h</li>
+            <li>Sábado: 09h às 13h</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> Av. Paulista, 1500 — São Paulo/SP</li>
+            <li><i class="fa-solid fa-phone"></i> (11) 3000-1234</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 <span>Domus Imobiliária</span>. Todos os direitos reservados.
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
