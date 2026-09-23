@@ -116,120 +116,446 @@ a{
 }
 
 main{
-    background:#82995f;
+    background:var(--verde);
 }
+
+/* =========================
+   ÁREA DE LOGIN — FIEL À REFERÊNCIA
+========================= */
 
 .login-area{
     min-height:calc(100vh - 82px);
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:60px 30px;
+    position:relative;
+    overflow:hidden;
+    padding:22px 20px 34px;
+
+    background:
+        linear-gradient(rgba(18,27,14,.08), rgba(18,27,14,.14)),
+        url("imagem_fundo.jpg") center center / cover no-repeat;
 }
+
+/* vinheta discreta igual à referência */
+.login-area::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17,27,13,.22) 0%,
+            rgba(17,27,13,.02) 48%,
+            rgba(17,27,13,.13) 100%
+        );
+}
+
+/* =========================
+   PAINEL CENTRAL
+========================= */
 
 .login-box{
-    width:min(430px,100%);
-    background:var(--creme);
-    color:var(--texto);
-    padding:42px;
-    box-shadow:0 12px 25px rgba(0,0,0,.22);
-    border:1px solid rgba(32,37,28,.15);
+    position:relative;
+    z-index:1;
+
+    width:542px;
+    min-height:704px;
+
+    padding:68px 56px 48px;
+
+    color:#f7f3df;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(16,22,12,.80) 0%,
+            rgba(26,31,16,.73) 100%
+        );
+
+    -webkit-backdrop-filter:blur(4px) saturate(108%);
+    backdrop-filter:blur(4px) saturate(108%);
+
+    border:1px solid rgba(246,240,184,.08);
+    border-radius:5px;
+
+    box-shadow:
+        0 18px 42px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.025);
 }
 
-.login-top span{
-    font-size:11px;
+/* tracinho do canto superior direito */
+.login-box::before{
+    content:"";
+    position:absolute;
+    top:18px;
+    right:21px;
+    width:40px;
+    height:1px;
+    background:rgba(246,240,184,.55);
+}
+
+/* texto vertical lateral */
+.login-box::after{
+    content:"IMOBILIÁRIA AUTÊNTICA";
+    position:absolute;
+    left:58px;
+    top:470px;
+
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+
+    font-size:7px;
+    font-weight:600;
+    letter-spacing:1.35px;
+    color:rgba(246,240,184,.72);
+}
+
+/* =========================
+   CABEÇALHO INTERNO
+========================= */
+
+.login-top{
+    position:relative;
+    margin-bottom:44px;
+}
+
+.login-top > span{
+    display:block;
+    margin-bottom:15px;
+
+    color:#f4e695;
+
+    font-family:Montserrat,Arial,sans-serif;
+    font-size:8px;
     font-weight:700;
+    letter-spacing:1.55px;
     text-transform:uppercase;
-    letter-spacing:0.5px;
 }
 
 .login-top h1{
+    margin:0;
+    color:#fffdf2;
+
     font-family:"Barlow Condensed",sans-serif;
-    font-size:62px;
+    font-size:54px;
     font-weight:800;
-    line-height:.85;
+    line-height:.88;
+    letter-spacing:-.8px;
     text-transform:uppercase;
-    margin:8px 0 15px;
+}
+
+.login-top h1 .linha2{
+    display:block;
+    text-align:right;
+    padding-right:2px;
 }
 
 .login-top p{
-    font-family:Georgia,serif;
-    font-size:13px;
-    line-height:1.5;
-    margin-bottom:28px;
+    display:none;
+}
+
+/* ponto e linha lateral */
+.login-top::before{
+    content:"";
+    position:absolute;
+    left:8px;
+    top:177px;
+
+    width:1px;
+    height:285px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(244,230,149,.72),
+            rgba(244,230,149,.15)
+        );
+}
+
+.login-top::after{
+    content:"";
+    position:absolute;
+    left:5px;
+    top:166px;
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+    background:#f4e695;
+
+    box-shadow:0 0 0 4px rgba(244,230,149,.035);
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.login-box form{
+    margin-left:72px;
 }
 
 .campo{
-    margin-bottom:18px;
+    margin-bottom:27px;
+    position:relative;
 }
 
 .campo label{
     display:block;
-    font-size:11px;
+    margin-bottom:8px;
+
+    color:#f8f5e8;
+
+    font-family:Montserrat,Arial,sans-serif;
+    font-size:8px;
     font-weight:700;
+    letter-spacing:.8px;
     text-transform:uppercase;
-    margin-bottom:7px;
 }
 
 .campo input{
     width:100%;
     height:44px;
-    padding:0 12px;
-    border:1px solid rgba(32,37,28,.3);
-    background:#fff9d2;
-    font-family:Montserrat,Arial,sans-serif;
-    font-size:12px;
-    color:var(--texto);
+    padding:0 13px;
+
+    color:#f8f5e8;
+    background:rgba(0,0,0,.08);
+
+    border:1px solid rgba(246,240,184,.34);
+    border-radius:0;
+
     outline:none;
-    transition:border-color .2s;
+
+    font-family:Montserrat,Arial,sans-serif;
+    font-size:10px;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.campo input::placeholder{
+    color:rgba(246,240,184,.38);
 }
 
 .campo input:focus{
-    border-color:var(--verde);
+    border-color:rgba(246,240,184,.78);
+    background:rgba(0,0,0,.14);
+    box-shadow:0 0 0 2px rgba(246,240,184,.035);
 }
+
+/* olho visual no campo de senha, sem alterar função */
+.campo:nth-of-type(2)::after{
+    content:"\f06e";
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+
+    position:absolute;
+    right:12px;
+    bottom:14px;
+
+    color:rgba(246,240,184,.68);
+    font-size:10px;
+    pointer-events:none;
+}
+
+/* linha lembrar + esqueceu */
+.opcoes-login{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+
+    margin:-4px 0 23px;
+
+    font-size:8px;
+    color:#f8f5e8;
+}
+
+.opcoes-login label{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    cursor:pointer;
+}
+
+.opcoes-login input[type="checkbox"]{
+    width:12px;
+    height:12px;
+    accent-color:#f4e695;
+}
+
+.opcoes-login a{
+    color:#f8f5e8;
+    text-decoration:none;
+}
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
 
 .entrar{
     width:100%;
-    height:44px;
+    height:40px;
+
     border:0;
-    background:var(--escuro);
-    color:var(--creme);
+    border-radius:0;
+
+    background:#f4e695;
+    color:#26301c;
+
     font-family:Montserrat,Arial,sans-serif;
-    font-size:11px;
+    font-size:9px;
     font-weight:700;
+    letter-spacing:1px;
     text-transform:uppercase;
+
     cursor:pointer;
-    transition:background .2s;
+    transition:
+        background .18s ease,
+        transform .18s ease;
 }
 
 .entrar:hover{
-    background:#1f3313;
+    background:#f7eaa2;
+    transform:translateY(-1px);
 }
 
+/* mensagem de erro */
 .mensagem{
-    min-height:20px;
-    margin-top:12px;
+    min-height:18px;
+    margin:9px 0 0 72px;
+
     text-align:center;
-    color:#8b2727;
-    font-size:11px;
+
+    color:#ffb5ab;
+    font-size:9px;
     font-weight:600;
 }
 
+/* =========================
+   DIVISOR + CRIAR CONTA
+========================= */
+
 .links-login{
-    margin-top:18px;
-    padding-top:16px;
-    border-top:1px solid rgba(32,37,28,.15);
+    margin:18px 0 0 72px;
+    padding-top:20px;
+
+    display:block;
+
+    position:relative;
+
+    border-top:1px solid rgba(246,240,184,.22);
+
+    font-size:9px;
+}
+
+/* "OU" sobre a linha */
+.links-login::before{
+    content:"OU";
+    position:absolute;
+    left:50%;
+    top:-6px;
+    transform:translateX(-50%);
+
+    padding:0 10px;
+
+    background:rgba(24,29,15,.94);
+    color:rgba(246,240,184,.72);
+
+    font-size:7px;
+    letter-spacing:.7px;
+}
+
+/* escondemos o link de recuperar aqui porque ele aparece em .opcoes-login */
+.links-login a:first-child{
+    display:none;
+}
+
+/* botão criar conta */
+.links-login a:last-child{
+    width:100%;
+    height:40px;
+
     display:flex;
-    justify-content:space-between;
-    font-size:11px;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #f4e695;
+
+    color:#f8f5e8;
+    text-decoration:none;
+
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+
+    transition:
+        background .18s ease,
+        color .18s ease;
 }
 
-.links-login a{
-    text-decoration:underline;
+.links-login a:last-child:hover{
+    background:rgba(244,230,149,.08);
+    color:#fffdf2;
 }
 
-.links-login a:hover{
-    color:var(--verde);
+/* nesta referência o footer não aparece na tela de login */
+footer{
+    display:none;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width:700px){
+    .login-area{
+        min-height:calc(100vh - 82px);
+        padding:26px 14px;
+    }
+
+    .login-box{
+        width:min(100%,542px);
+        min-height:auto;
+        padding:50px 28px 38px;
+    }
+
+    .login-box::after,
+    .login-top::before,
+    .login-top::after{
+        display:none;
+    }
+
+    .login-top h1{
+        font-size:48px;
+    }
+
+    .login-box form,
+    .mensagem,
+    .links-login{
+        margin-left:0;
+    }
+}
+
+@media (max-width:430px){
+    .login-top h1{
+        font-size:42px;
+    }
+
+    .login-top h1 .linha2{
+        text-align:left;
+    }
+
+    .opcoes-login{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 }
 
 footer{
@@ -366,8 +692,11 @@ footer{
             <div class="login-box">
 
                 <div class="login-top">
-                    <span>Área do cliente</span>
-                    <h1>Entrar.</h1>
+                    <span>Acesso à plataforma</span>
+                    <h1>
+                        Bem-vindo
+                        <span class="linha2">à Domus.</span>
+                    </h1>
                     <p>
                         Acesse sua conta para acompanhar seus imóveis,
                         favoritos e visitas.
@@ -377,16 +706,25 @@ footer{
                 <form onsubmit="event.preventDefault(); entrar();">
 
                     <div class="campo">
-                        <label for="usuario">Usuário</label>
-                        <input type="text" id="usuario" placeholder="Digite seu usuário">
+                        <label for="usuario">E-mail</label>
+                        <input type="text" id="usuario" placeholder="seu@email.com">
                     </div>
 
                     <div class="campo">
                         <label for="senha">Senha</label>
-                        <input type="password" id="senha" placeholder="Digite sua senha">
+                        <input type="password" id="senha" placeholder="••••••••">
                     </div>
 
-                    <button type="submit" class="entrar">Entrar</button>
+                    <div class="opcoes-login">
+                        <label>
+                            <input type="checkbox">
+                            <span>Lembrar-me</span>
+                        </label>
+
+                        <a href="recuperar-senha.html">Esqueceu sua senha?</a>
+                    </div>
+
+                    <button type="submit" class="entrar">Entrar →</button>
 
                 </form>
 
@@ -394,7 +732,7 @@ footer{
 
                 <div class="links-login">
                     <a href="recuperar-senha.html">Esqueci minha senha</a>
-                    <a href="cadastro.html">Criar conta</a>
+                    <a href="cadastro.html">Criar uma conta</a>
                 </div>
 
             </div>
