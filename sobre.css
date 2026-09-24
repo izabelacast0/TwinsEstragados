@@ -1,0 +1,677 @@
+/* ================================================================
+   SOBRE.CSS
+   Página "Sobre a Domus"
+   ================================================================ */
+
+
+/* ================================================================
+   VARIÁVEIS
+   ================================================================ */
+
+.sobre-page {
+
+    --sobre-verde: #7a9257;
+    --sobre-escuro: #2c481c;
+    --sobre-creme: #f6f0b8;
+    --sobre-texto: #20251c;
+    --sobre-linha: rgba(246, 240, 184, .45);
+
+    background: var(--sobre-verde);
+    color: var(--sobre-creme);
+
+}
+
+
+/* ================================================================
+   HERO
+   ================================================================ */
+
+.sobre-hero {
+
+    display: grid;
+
+    grid-template-columns: 39% 61%;
+
+    min-height: 445px;
+
+}
+
+
+/* ================================================================
+   PARTE VERDE / TEXTO
+   ================================================================ */
+
+.sobre-texto {
+
+    position: relative;
+
+    padding: 28px 42px 40px 34px;
+
+    background-color: var(--sobre-verde);
+
+    background-image:
+        radial-gradient(
+            rgba(255, 245, 185, .12) .6px,
+            transparent .6px
+        );
+
+    background-size: 5px 5px;
+
+    overflow: hidden;
+
+}
+
+
+/* ================================================================
+   BREADCRUMB
+   ================================================================ */
+
+.sobre-breadcrumb {
+
+    margin-bottom: 38px;
+
+    font-family: Montserrat, Arial, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+    color: var(--sobre-creme);
+
+}
+
+
+/* ================================================================
+   TÍTULO
+   ================================================================ */
+
+.sobre-texto h1 {
+
+    margin: 0 0 16px;
+
+    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-size: clamp(52px, 5vw, 68px);
+
+    font-weight: 800;
+
+    line-height: .82;
+
+    letter-spacing: -1px;
+
+    text-transform: uppercase;
+
+    color: var(--sobre-creme);
+
+}
+
+
+.sobre-texto h1 strong {
+
+    display: block;
+
+    color: var(--sobre-texto);
+
+}
+
+
+/* ================================================================
+   SUBTÍTULO
+   ================================================================ */
+
+.sobre-texto h2 {
+
+    margin: 0 0 14px;
+
+    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+
+    color: var(--sobre-creme);
+
+}
+
+
+/* ================================================================
+   PARÁGRAFOS
+   ================================================================ */
+
+.sobre-texto p {
+
+    max-width: 315px;
+
+    margin: 0 0 17px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 12px;
+
+    line-height: 1.48;
+
+    color: #f6efb5;
+
+}
+
+
+/* ================================================================
+   LINK
+   ================================================================ */
+
+.sobre-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    margin-top: 4px;
+
+    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: var(--sobre-creme);
+
+    transition:
+        gap .2s ease,
+        opacity .2s ease;
+
+}
+
+
+.sobre-link span {
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+}
+
+
+.sobre-link:hover {
+
+    gap: 30px;
+
+    opacity: .8;
+
+}
+
+
+/* ================================================================
+   TEXTO VERTICAL
+   ================================================================ */
+
+.sobre-vertical {
+
+    position: absolute;
+
+    left: 9px;
+
+    bottom: 38px;
+
+    writing-mode: vertical-rl;
+
+    transform: rotate(180deg);
+
+    font-family: Montserrat, Arial, sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--sobre-creme);
+
+    opacity: .7;
+
+}
+
+
+/* ================================================================
+   IMAGEM PRINCIPAL
+   ================================================================ */
+
+.sobre-imagem {
+
+    min-height: 445px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255, 245, 185, .04),
+            transparent 20%
+        ),
+        url("imagem_fundo.png");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/* ================================================================
+   VALORES + NÚMEROS
+   ================================================================ */
+
+.sobre-informacoes {
+
+    display: grid;
+
+    grid-template-columns: 1.8fr 1fr;
+
+    background: var(--sobre-escuro);
+
+}
+
+
+/* ================================================================
+   VALORES
+   ================================================================ */
+
+.valores {
+
+    padding: 17px 30px 20px;
+
+    border-top: 1px solid var(--sobre-linha);
+
+    background: var(--sobre-verde);
+
+}
+
+
+.secao-titulo {
+
+    margin-bottom: 14px;
+
+    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: var(--sobre-creme);
+
+}
+
+
+/* ================================================================
+   GRID DE VALORES
+   ================================================================ */
+
+.valores-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+/* ================================================================
+   CADA VALOR
+   ================================================================ */
+
+.valor {
+
+    min-width: 0;
+
+    padding-right: 14px;
+
+    border-right:
+        1px solid var(--sobre-linha);
+
+}
+
+
+.valor:last-child {
+
+    border-right: none;
+
+}
+
+
+.valor-numero {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    color: var(--sobre-creme);
+
+}
+
+
+.valor h3 {
+
+    margin: 0 0 7px;
+
+    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: var(--sobre-creme);
+
+}
+
+
+.valor p {
+
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 10px;
+
+    line-height: 1.35;
+
+    color: #e9e3a8;
+
+}
+
+
+/* ================================================================
+   NÚMEROS
+   ================================================================ */
+
+.numeros {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    background: var(--sobre-escuro);
+
+}
+
+
+/* ================================================================
+   CADA NÚMERO
+   ================================================================ */
+
+.numero {
+
+    padding-right: 15px;
+
+    border-right:
+        1px solid rgba(246, 240, 184, .4);
+
+}
+
+
+.numero:last-child {
+
+    border-right: none;
+
+}
+
+
+.numero strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: var(--sobre-creme);
+
+}
+
+
+.numero span {
+
+    display: block;
+
+    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.15;
+
+    text-transform: uppercase;
+
+    color: var(--sobre-creme);
+
+}
+
+
+/* ================================================================
+   TABLET
+   ================================================================ */
+
+@media (max-width: 900px) {
+
+    .sobre-hero {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .sobre-texto {
+
+        padding:
+            30px
+            30px
+            38px;
+
+    }
+
+
+    .sobre-texto h1 {
+
+        font-size: 60px;
+
+    }
+
+
+    .sobre-imagem {
+
+        min-height: 350px;
+
+    }
+
+
+    .sobre-informacoes {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .valores {
+
+        padding: 25px;
+
+    }
+
+
+    .numeros {
+
+        padding: 25px;
+
+    }
+
+}
+
+
+/* ================================================================
+   CELULAR
+   ================================================================ */
+
+@media (max-width: 620px) {
+
+    .sobre-texto {
+
+        min-height: 420px;
+
+        padding:
+            25px
+            24px
+            38px;
+
+    }
+
+
+    .sobre-breadcrumb {
+
+        margin-bottom: 34px;
+
+    }
+
+
+    .sobre-texto h1 {
+
+        font-size: 56px;
+
+    }
+
+
+    .sobre-texto p {
+
+        max-width: 100%;
+
+        font-size: 12px;
+
+    }
+
+
+    .sobre-imagem {
+
+        min-height: 280px;
+
+        background-position: center;
+
+    }
+
+
+    .valores {
+
+        padding: 22px 20px;
+
+    }
+
+
+    .valores-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .valor {
+
+        padding-bottom: 15px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--sobre-linha);
+
+    }
+
+
+    .valor:nth-child(3),
+    .valor:nth-child(4) {
+
+        border-bottom: none;
+
+    }
+
+
+    .numeros {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 10px;
+
+        padding: 20px 15px;
+
+    }
+
+
+    .numero {
+
+        padding-right: 8px;
+
+    }
+
+
+    .numero strong {
+
+        font-size: 23px;
+
+    }
+
+
+    .numero span {
+
+        font-size: 9px;
+
+    }
+
+
+    .sobre-vertical {
+
+        left: 6px;
+
+        bottom: 25px;
+
+    }
+
+}
