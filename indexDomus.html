@@ -17,25 +17,97 @@ a{color:inherit;text-decoration:none}
 .site{width:100%;overflow:hidden}
 
 .topbar{
-    position:absolute;top:0;left:0;width:100%;height:92px;z-index:5;
-    display:flex;align-items:center;padding-left:36px;gap:40px;
-    background:rgba(219, 219, 219, 0.096);
-    border-bottom:1px solid rgba(153, 150, 121, 0.35);
-    box-shadow:0 4px 14px rgba(32,37,28,.22);
+    height:92px;
+    background:linear-gradient(180deg, rgba(44,72,28,0.92) 0%, rgba(44,72,28,0.85) 100%);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    display:flex;
+    align-items:center;
+    padding:0 0 0 36px;
+    gap:40px;
+    position:relative;
+    z-index:10;
+    border-bottom:1px solid rgba(246,240,184,.25);
+    box-shadow:0 4px 20px rgba(20,25,18,.25);
 }
-.brand{width:300px;display:flex;align-items:center}
-.brand img{height:200px;width:auto}
-.nav{display:flex;gap:34px;flex:1}
-.nav a{font-size:12px;text-transform:uppercase;padding:10px 2px;border-bottom:2px solid transparent;transition:border-color .2s}
-.nav a:hover{border-bottom-color:var(--creme)}
+
+.brand{
+    width:300px;
+    height:92px;
+    display:flex;
+    align-items:center;
+}
+
+.brand img{
+    height:200px;
+    width:auto;
+    object-fit:contain;
+}
+
+.nav{
+    display:flex;
+    gap:34px;
+    flex:1;
+}
+
+.nav a{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:10px 2px;
+    border-bottom:2px solid transparent;
+    color:rgba(246,240,184,.85);
+    transition:all .25s ease;
+}
+
+.nav a:hover,
+.nav a.active{
+    color:var(--creme);
+    border-bottom-color:var(--creme);
+}
+
 .client{
-    height:92px;min-width:215px;margin-left:auto;border:0;
-    background:var(--creme);color:var(--texto);cursor:pointer;padding:0 25px;
-    display:flex;align-items:center;justify-content:space-between;
-    font-size:12px;text-transform:uppercase;font-weight:600;
+    height:92px;
+    min-width:215px;
+    margin-left:auto;
+    border:0;
+    background:var(--creme);
+    color:var(--texto);
+    cursor:pointer;
+    padding:0 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:13px;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:.5px;
+    transition:background .2s ease,transform .2s ease;
 }
-.client-lines{display:flex;flex-direction:column;gap:4px}
-.client-lines span{width:18px;height:2px;background:var(--texto);display:block}
+
+.client:hover{
+    background:#faf5cc;
+}
+
+.client-lines{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.client-lines span{
+    width:18px;
+    height:2px;
+    background:var(--texto);
+    display:block;
+    transition:transform .2s ease;
+}
+
+.client:hover .client-lines span:nth-child(2){
+    transform:translateX(2px);
+}
+
 
 .inicio{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
 .inicio-fundo{
@@ -51,22 +123,44 @@ a{color:inherit;text-decoration:none}
     position:relative;z-index:2;width:min(1180px,calc(100% - 90px));
     margin:0 auto;padding:0 0 120px; 
 }
-.pequeno-titulo{font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.pequeno-titulo{
+    font-size:14px; 
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:14px;
+}
 .inicio h1{
-    max-width:760px;font:800 clamp(60px,8vw,102px)/.82 "Barlow Condensed",sans-serif;
-    text-transform:uppercase;margin-bottom:5px;transition:opacity .25s ease;
-
+    max-width:760px;
+    font:800 clamp(60px,8vw,102px)/.82 "Barlow Condensed",sans-serif;
+    text-transform:uppercase;
+    margin-bottom:12px;
+    transition:opacity .25s ease;
 }
 .inicio h1 span{color:var(--creme)}
 .inicio-texto{
-    max-width:470px;font:16px/1.55 Georgia,serif;margin-bottom:28px;transition:opacity .25s ease;
+    max-width:520px;
+    font-family:Georgia,serif;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:28px;
+    transition:opacity .25s ease;
 }
 .botoes{display:flex;gap:10px;flex-wrap:wrap}
 .botao{
-    min-width:155px;padding:13px 17px;background:var(--creme);color:var(--texto);
-    display:inline-flex;align-items:center;justify-content:space-between;gap:28px;
-    font-size:11px;font-weight:700;text-transform:uppercase;transition:.25s;
-    border:0;cursor:pointer;
+    min-width:165px;
+    padding:14px 20px;
+    background:var(--creme);
+    color:var(--texto);
+    display:inline-flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:28px;
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    transition:.25s;
+    border:0;
+    cursor:pointer;
 }
 .botao:hover{transform:translateY(-3px);background:#fff8cf}
 .botao-secundario{background:transparent;color:var(--creme);border:1px solid var(--creme)}
@@ -76,7 +170,12 @@ a{color:inherit;text-decoration:none}
 .pontos{display:flex;gap:6px;margin-left:5px}
 .ponto{width:8px;height:8px;border-radius:50%;border:1px solid var(--creme);background:transparent;cursor:pointer}
 .ponto.ativo{background:var(--creme)}
-.contador{position:absolute;right:0;bottom:178px;font:700 13px "Barlow Condensed",sans-serif}
+.contador{
+    position:absolute;
+    right:0;
+    bottom:178px;
+    font:700 15px "Barlow Condensed",sans-serif; 
+}
 
 .busca-container{
     position:relative;z-index:4;
@@ -90,8 +189,8 @@ a{color:inherit;text-decoration:none}
 }
 .busca-abas{display:flex;gap:10px;margin-bottom:20px}
 .busca-aba{
-    padding:8px 20px;
-    font:700 12px "Barlow Condensed",sans-serif;
+    padding:10px 22px;
+    font:700 14px "Barlow Condensed",sans-serif; 
     text-transform:uppercase;
     letter-spacing:1px;
     border:1px solid var(--escuro);
@@ -112,7 +211,7 @@ a{color:inherit;text-decoration:none}
 }
 .busca-campo{display:flex;flex-direction:column;gap:6px}
 .busca-campo label{
-    font-size:10px;
+    font-size:12px;
     font-weight:700;
     text-transform:uppercase;
     color:var(--escuro);
@@ -125,20 +224,20 @@ a{color:inherit;text-decoration:none}
     background:#fff;
     color:var(--texto);
     font-family:Montserrat,sans-serif;
-    font-size:13px;
+    font-size:15px; 
     outline:none;
 }
 .busca-campo select:focus, .busca-campo input:focus{
     border-color:var(--escuro);
 }
 .btn-buscar{
-    height:45px;
+    height:48px;
     align-self:end;
     padding:0 28px;
     background:var(--escuro);
     color:var(--creme);
     border:0;
-    font:700 12px "Barlow Condensed",sans-serif;
+    font:700 14px "Barlow Condensed",sans-serif; 
     text-transform:uppercase;
     letter-spacing:1px;
     cursor:pointer;
@@ -155,10 +254,21 @@ a{color:inherit;text-decoration:none}
 .sobre{background:var(--creme);color:var(--texto);padding:90px 0 70px}
 .sobre-conteudo{width:min(1180px,calc(100% - 90px));margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .sobre-texto{padding:10px 15px 10px 0}
-.sobre-titulo{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.sobre-titulo{
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
 .sobre h2{font:800 clamp(56px,6vw,78px)/.85 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:12px 0 25px}
 .sobre h2 span{display:block;color:var(--verde)}
-.sobre p{max-width:520px;font:15px/1.65 Georgia,serif;margin-bottom:16px}
+.sobre p{
+    max-width:540px;
+    font-family:Georgia,serif;
+    font-size:18px; 
+    line-height:1.65;
+    margin-bottom:16px;
+}
 .sobre-imagem{min-height:430px;background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=85") center/cover}
 
 .destaques-grid{
@@ -179,28 +289,34 @@ a{color:inherit;text-decoration:none}
     box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 .card-destaque i{
-    font-size:24px;
+    font-size:26px; 
     color:var(--verde);
     margin-bottom:15px;
     display:block;
 }
 .card-destaque h4{
-    font:700 20px "Barlow Condensed",sans-serif;
+    font:700 22px "Barlow Condensed",sans-serif; 
     text-transform:uppercase;
     margin-bottom:8px;
     color:var(--texto);
 }
 .card-destaque p{
-    font:13px/1.5 Georgia,serif;
+    font-family:Georgia,serif;
+    font-size:15px; 
+    line-height:1.55;
     color:#555;
 }
 
 .valores{width:min(1180px,calc(100% - 90px));margin:55px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .valor{padding-top:15px;border-top:1px solid rgba(32,37,28,.35);transition:transform .2s}
 .valor:hover{transform:translateY(-2px)}
-.valor small{font:700 13px "Barlow Condensed",sans-serif}
-.valor h3{font:700 23px "Barlow Condensed",sans-serif;text-transform:uppercase;margin:6px 0}
-.valor p{font:12px/1.5 Georgia,serif}
+.valor small{font:700 15px "Barlow Condensed",sans-serif}
+.valor h3{font:700 25px "Barlow Condensed",sans-serif;text-transform:uppercase;margin:6px 0} 
+.valor p{
+    font-family:Georgia,serif;
+    font-size:14px; 
+    line-height:1.5;
+}
 
 footer{background:var(--escuro);color:#cfd8c4;padding:3rem 30px 0}
 .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1.1fr 1.5fr;gap:2.4rem;padding-bottom:2.2rem;border-bottom:1px solid rgba(255,245,185,.15)}
@@ -234,19 +350,6 @@ footer{background:var(--escuro);color:#cfd8c4;padding:3rem 30px 0}
 .logout{margin:auto 0 20px 22px;border:0;background:none;color:var(--texto);cursor:pointer;text-align:left;font-size:12px;font-weight:700;display:flex;align-items:center;gap:10px}
 .logout:hover{color:var(--verde)}
 
-@media(max-width:992px){
-    .busca-form{grid-template-columns:1fr 1fr;gap:12px}
-    .btn-buscar{grid-column:span 2}
-    .destaques-grid{grid-template-columns:1fr;gap:15px}
-    .valores{grid-template-columns:1fr 1fr}
-    .footer-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-    .busca-form{grid-template-columns:1fr}
-    .btn-buscar{grid-column:span 1}
-    .valores{grid-template-columns:1fr}
-    .footer-grid{grid-template-columns:1fr}
-}
 </style>
 </head>
 <body>
@@ -263,7 +366,7 @@ footer{background:var(--escuro);color:#cfd8c4;padding:3rem 30px 0}
     </nav>
 
     <button class="client" id="openMenu">
-        <span>Área do usuário</span>
+        <span>Área do cliente</span>
         <span class="client-lines"><span></span><span></span><span></span></span>
     </button>
 </header>
