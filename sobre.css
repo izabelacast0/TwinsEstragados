@@ -543,6 +543,27 @@
 
     }
 
+
+    /* No layout de 1 coluna não sobra espaço lateral para o
+       texto vertical decorativo — ele passa a ficar na frente
+       do parágrafo. Convertendo para uma legenda horizontal,
+       fora do fluxo absoluto, ele acompanha o conteúdo em vez
+       de sobrepor. */
+
+    .sobre-vertical {
+
+        position: static;
+
+        writing-mode: horizontal-tb;
+
+        transform: none;
+
+        margin-top: 26px;
+
+        letter-spacing: 1.5px;
+
+    }
+
 }
 
 
@@ -668,9 +689,9 @@
 
     .sobre-vertical {
 
-        left: 6px;
+        margin-top: 20px;
 
-        bottom: 25px;
+        font-size: 7px;
 
     }
 
