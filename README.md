@@ -1,16 +1,16 @@
 # DOMUS — sistema imobiliário
 
-Interface integrada inspirada no Figma original: verde oliva, creme, amarelo, tipografia condensada, arquitetura em destaque e páginas com rolagem. HTML/CSS/JavaScript sem framework; API Python e banco SQLite, sem dependências externas de execução.
+Interface integrada inspirada no Figma original: verde oliva, creme, amarelo, tipografia condensada, arquitetura em destaque e páginas com rolagem. HTML/CSS/JavaScript sem framework; API JavaScript (Node.js) e banco SQLite, sem dependências externas de execução.
 
 ## Abrir o projeto
 
-Instale Python 3.10 ou superior. Na pasta do projeto:
+Instale Node.js 24 ou superior. Na pasta do projeto:
 
 ```sh
-python server.py
+npm start
 ```
 
-No Windows, caso `python` não seja reconhecido, use `py server.py`.
+Não é necessário instalar pacotes: o servidor usa os módulos nativos do Node.js.
 Abra **http://localhost:3000**. Não abra os arquivos HTML por duplo clique ou Live Server: cadastro e demais operações precisam da API.
 
 O banco `domus.sqlite3` é criado automaticamente. Contém seis imóveis fictícios para experimentar a busca. Contas, favoritos, anúncios, visitas e mensagens continuam salvos após reiniciar. Faça backup do banco e da pasta `web/uploads`.
@@ -34,7 +34,7 @@ O banco `domus.sqlite3` é criado automaticamente. Contém seis imóveis fictíc
 Cadastre uma conta normalmente. No terminal do servidor, habilite o perfil:
 
 ```sh
-python server.py --make-admin seu-email@example.com
+node server.js --make-admin seu-email@example.com
 ```
 
 Entre novamente ou atualize a página. A aba Administração aparece somente para esse perfil, com autorização verificada na API. Contas públicas nunca podem escolher o perfil administrador. O administrador pode habilitar o perfil corretor para contas existentes; anunciantes gerenciam apenas seus próprios anúncios. Os perfis e permissões deverão ser confrontados com o documento de requisitos quando ele estiver disponível.
@@ -46,13 +46,13 @@ Guarde a chave exibida após o cadastro. Em “Esqueci minha senha”, informe e
 ## Estrutura
 
 ```text
-server.py          API, autenticação, autorização e inicialização do banco
+server.js          API, autenticação, autorização e inicialização do banco
 web/index.html     Estrutura compartilhada
 web/app.css        Sistema visual e responsividade
 web/app.js         Rotas, formulários e integração com API
 web/assets/        Marca original e imagem arquitetônica
 web/uploads/       Fotografias dos anúncios (não versionadas)
-tests/test_api.py  Testes de integração em banco temporário
+tests/api.test.js  Testes de integração em banco temporário
 ```
 
 Os HTML da raiz são entradas compatíveis, sem as antigas senhas fixas e scripts simulados. Os CSS e JSON antigos foram preservados como referência, mas não são carregados pela nova aplicação.
@@ -60,16 +60,16 @@ Os HTML da raiz são entradas compatíveis, sem as antigas senhas fixas e script
 ## Validação
 
 ```sh
-python -m unittest discover -s tests -v
+npm test
 node --check web/app.js
 ```
 
-Os testes cobrem persistência, duplicidade, autenticação, recuperação, revogação de sessão, favoritos, visitas, autorização entre usuários, anúncios, administração e isolamento de arquivos privados. Node é necessário apenas para a checagem opcional da sintaxe JavaScript.
+Os testes cobrem persistência, duplicidade, autenticação, recuperação, revogação de sessão, favoritos, visitas, autorização entre usuários, anúncios, administração e isolamento de arquivos privados. Os testes usam o executor nativo do Node.js e bancos temporários.
 
 ## Limites de implantação
 
 Esta entrega é uma aplicação acadêmica executável, não um serviço imobiliário em produção. O servidor HTTP incluído é voltado ao desenvolvimento. Antes de exposição pública, use servidor de aplicação/reverse proxy apropriado com HTTPS, configure `DOMUS_SECURE_COOKIE=1`, backups e limites de requisição no proxy. `DOMUS_DB` permite definir o caminho do banco. Não use armazenamento efêmero para banco ou uploads.
 
-GitHub Pages e hospedagens somente estáticas **não executam esta API Python**. Não foi feita implantação pública ou alteração da branch principal. Não há pagamentos, contratos, geolocalização, integração com CRM ou envio de e-mail. Mensagens de contato são registradas e aparecem na administração. Fotos do catálogo inicial vêm do Unsplash; fontes vêm do Google Fonts e possuem fallback local. Anúncios sem foto usam a imagem institucional original, que tem resolução limitada (387 × 305).
+GitHub Pages e hospedagens somente estáticas **não executam esta API Node.js**. Não foi feita implantação pública ou alteração da branch principal. Não há pagamentos, contratos, geolocalização, integração com CRM ou envio de e-mail. Mensagens de contato são registradas e aparecem na administração. Fotos do catálogo inicial vêm do Unsplash; fontes vêm do Google Fonts e possuem fallback local. Anúncios sem foto usam a imagem institucional original, que tem resolução limitada (387 × 305).
 
 A imagem do Figma e o ZIP foram usados como referência. O slide citado com casos de uso, relacionamentos e requisitos não constava dos anexos disponíveis; a conformidade completa com ele ainda precisa ser verificada.
