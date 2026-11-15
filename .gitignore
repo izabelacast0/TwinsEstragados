@@ -1,5 +1,0 @@
-node_modules/
-*.sqlite3*
-.env
-web/uploads/
-dist/
