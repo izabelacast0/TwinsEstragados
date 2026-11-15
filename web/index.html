@@ -31,17 +31,87 @@
       <a class="account-link" href="#/login">Minha conta →</a>
     </header>
     <main id="main" tabindex="-1"></main>
-    <footer>
+    <footer class="site-footer">
       <div class="footer-top">
-        <a class="brand" href="#/">DOMUS →</a>
-        <p>O seu próximo capítulo<br />começa com um espaço.</p>
-        <a href="#/imoveis">Encontre o seu →</a>
+        <div class="footer-signature">
+          <a class="brand" href="#/" aria-label="Domus, início"
+            >DOMUS<span aria-hidden="true"><svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a
+          >
+          <p>Espaços para viver.<br />Conexões para ficar.</p>
+        </div>
+        <a class="footer-invite" href="#/contato"
+          >Seu próximo capítulo<br />começa com uma conversa.<span
+            aria-hidden="true"
+            ><svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span
+          ></a
+        >
+      </div>
+      <div class="footer-grid">
+        <section aria-labelledby="footer-address">
+          <p class="footer-label" id="footer-address">01 / Encontre a Domus</p>
+          <address>Av. João Naves de Ávila<br />Uberlândia — MG</address>
+          <a
+            class="footer-text-link"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Jo%C3%A3o%20Naves%20de%20%C3%81vila%2C%20Uberl%C3%A2ndia%20MG"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Ver região no mapa <span aria-hidden="true"><svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a
+          >
+        </section>
+        <section aria-labelledby="footer-contact">
+          <p class="footer-label" id="footer-contact">02 / Vamos conversar</p>
+          <a class="footer-contact-link" href="tel:+553433333333"
+            >(34) 3333-3333</a
+          ><a class="footer-contact-link" href="mailto:contato@domus.com"
+            >contato@domus.com</a
+          >
+          <p class="footer-hours">Segunda a sexta<br />08h às 18h</p>
+        </section>
+        <section aria-labelledby="footer-explore">
+          <p class="footer-label" id="footer-explore">03 / Explore</p>
+          <ul class="footer-links">
+            <li><a href="#/imoveis">Encontrar imóvel</a></li>
+            <li><a href="#/anunciar">Anunciar imóvel</a></li>
+            <li><a href="#/sobre">Conheça a Domus</a></li>
+            <li><a href="#/login">Acessar minha conta</a></li>
+          </ul>
+        </section>
+        <section aria-labelledby="footer-social">
+          <p class="footer-label" id="footer-social">04 / Por perto</p>
+          <p class="footer-social-copy">
+            Outros olhares sobre<br />o jeito de habitar.
+          </p>
+          <a
+            class="footer-instagram"
+            href="https://instagram.com/domusimob"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram da Domus, @domusimob, abre em nova aba"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r=".8"
+                fill="currentColor"
+                stroke="none"
+              /></svg
+            ><span>Instagram<br /><strong>@domusimob</strong></span
+            ><span class="social-arrow" aria-hidden="true"><svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a
+          >
+        </section>
       </div>
       <div class="footer-bottom">
-        <span>DOMUS © <span id="year"></span></span
-        ><span>Projeto acadêmico · Imóveis demonstrativos</span
-        ><a href="#/privacidade">Privacidade</a
-        ><a href="#/anunciar">Anunciar um imóvel →</a>
+        <span>© <span id="year"></span> Domus</span
+        ><span>Projeto acadêmico · Dados e imóveis ilustrativos</span
+        ><a href="#/privacidade">Privacidade</a>
       </div>
     </footer>
     <div id="notice" role="status" aria-live="polite"></div>
