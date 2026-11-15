@@ -553,7 +553,7 @@ footer {
   font-size: 76px;
 }
 .auth-image {
-  background: var(--olive) url("/assets/arquitetura.png") center/cover;
+  background: var(--olive) url("./assets/arquitetura.png") center/cover;
   min-height: 350px;
 }
 .form-stack {
@@ -1023,4 +1023,22 @@ header .brand img {
 }
 #account-panel > h3 {
   margin-top: 45px;
+}
+
+.demo-banner {
+  max-width: none;
+  margin: 0;
+  padding: 10px 4.5%;
+  background: #eee8cd;
+  font-size: 11px;
+  text-align: center;
+}
+.demo-panel {
+  border: 1px solid var(--line);
+  padding: 18px;
+  margin-bottom: 24px;
+}
+.demo-panel p {
+  font-size: 12px;
+  margin: 8px 0 16px;
 }

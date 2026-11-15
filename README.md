@@ -2,7 +2,19 @@
 
 Interface integrada inspirada no Figma original: verde oliva, creme, amarelo, tipografia condensada, arquitetura em destaque e páginas com rolagem. HTML/CSS/JavaScript sem framework; API JavaScript (Node.js) e banco SQLite, sem dependências externas de execução.
 
-## Abrir o projeto
+## Compartilhar pelo GitHub Pages
+
+A versão pública funciona sem servidor e sem instalação para visitantes. A branch `gh-pages` contém somente os arquivos estáticos preparados para publicação.
+
+Em **Settings → Pages**, selecione **Deploy from a branch**, branch **gh-pages**, pasta **/(root)** e clique em **Save**. Aguarde o GitHub informar o link publicado nessa mesma tela.
+
+O catálogo é aberto. Em Minha conta, é possível experimentar os perfis Cliente, Corretor e Administrador ou criar um cadastro fictício. Favoritos, anúncios, visitas e mensagens da demonstração são guardados somente no navegador usado; não são compartilhados com outras pessoas ou dispositivos. Nenhuma mensagem é enviada e nenhuma visita comercial é marcada. Use dados fictícios. A navegação anônima pelo catálogo não grava registros da aplicação.
+
+Para apagar os dados locais, abra Privacidade e escolha **Limpar demonstração neste navegador**.
+
+Para preparar uma atualização do pacote público, use `npm run build:pages`. O conteúdo de `dist/` deve substituir os arquivos da branch `gh-pages`. Alterar a branch principal sozinho não atualiza essa cópia publicada. O pacote exclui banco SQLite, contas reais e fotos enviadas ao servidor.
+
+## Executar a versão opcional com servidor
 
 Instale Node.js 24 ou superior. Na pasta do projeto:
 
