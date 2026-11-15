@@ -1,0 +1,8 @@
+{
+  "name": "domus",
+  "private": true,
+  "scripts": {
+    "dev": "python3 server.py --port 3000 --host 0.0.0.0",
+    "test": "python3 -m unittest discover -s tests -v"
+  }
+}
