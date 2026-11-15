@@ -239,11 +239,6 @@ async function render() {
       if (route === "privacidade")
         main.innerHTML =
           '<section class="section"><h1>Seus dados.</h1><p>Esta é uma demonstração pública. Navegar pelo catálogo não exige cadastro. Somente ações que você realiza nos perfis de demonstração são guardadas neste navegador, como favoritos, anúncios e visitas.</p><p>Não existe conta compartilhada entre dispositivos, autenticação real, envio de mensagens ou agendamento comercial. Use dados fictícios. As senhas locais são guardadas como hash. Qualquer pessoa com acesso ao navegador pode acessar ou alterar os dados de demonstração.</p><p>Fontes e fotos ilustrativas são carregadas do Google Fonts e Unsplash. Você pode apagar os registros locais pelo botão abaixo.</p><button class="button" id="clear-demo">Limpar demonstração neste navegador</button></section>';
-      const demoNote = document.createElement("p");
-      demoNote.className = "demo-banner";
-      demoNote.textContent =
-        "Demonstração · Dados salvos somente neste navegador · Nenhuma visita ou mensagem é enviada";
-      main.prepend(demoNote);
     }
     document.title = `${route === "imoveis" ? "Encontre seu imóvel" : route === "conta" ? "Minha conta" : "Espaços para viver"} | Domus`;
     document

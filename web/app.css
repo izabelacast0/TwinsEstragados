@@ -19,7 +19,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font:
-    15px/1.6 "DM Sans",
+    16px/1.6 "DM Sans",
     Arial,
     sans-serif;
 }
@@ -97,7 +97,7 @@ nav {
   display: flex;
   gap: 32px;
   margin: auto;
-  font-size: 13px;
+  font-size: 16px;
 }
 nav a:hover,
 nav a[aria-current="page"] {
@@ -107,13 +107,13 @@ nav a[aria-current="page"] {
 .account-link {
   border-bottom: 1px solid;
   padding: 7px 0;
-  font-size: 13px;
+  font-size: 16px;
 }
 .menu-toggle {
   display: none;
 }
 .eyebrow {
-  font: 11px/1.5 monospace;
+  font: 14px/1.5 monospace;
   letter-spacing: 1.8px;
   text-transform: uppercase;
   margin-bottom: 22px;
@@ -178,7 +178,7 @@ p {
   color: var(--ink);
 }
 .hero-copy p {
-  font-size: 14px;
+  font-size: 17px;
   max-width: 310px;
   margin-bottom: 28px;
 }
@@ -200,11 +200,11 @@ p {
   right: 30px;
   background: var(--cream);
   padding: 16px 22px;
-  font: 11px/1.7 monospace;
+  font: 14px/1.7 monospace;
   max-width: 185px;
 }
 .hero-number {
-  font: 11px monospace;
+  font: 14px monospace;
   position: absolute;
   bottom: 30px;
   left: 9%;
@@ -219,7 +219,7 @@ p {
   align-items: center;
   gap: 32px;
   border: 1px solid var(--dark);
-  font-size: 13px;
+  font-size: 16px;
   min-height: 48px;
   transition:
     background 0.2s,
@@ -262,7 +262,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
 }
 .field input,
@@ -302,7 +302,7 @@ p {
 .text-link {
   border-bottom: 1px solid;
   padding-bottom: 6px;
-  font-size: 13px;
+  font-size: 16px;
   white-space: nowrap;
 }
 .grid {
@@ -334,7 +334,7 @@ p {
   left: 15px;
   padding: 4px 11px;
   background: var(--paper);
-  font: 10px/1.8 monospace;
+  font: 14px/1.8 monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -357,7 +357,7 @@ p {
   border-bottom: 1px solid var(--line);
 }
 .location {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   opacity: 0.75;
@@ -369,7 +369,7 @@ p {
 .specs {
   display: flex;
   gap: 14px;
-  font-size: 12px;
+  font-size: 15px;
   opacity: 0.8;
 }
 .price-row {
@@ -386,7 +386,7 @@ p {
   font-size: 22px;
 }
 .price-row small {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 400;
 }
 .manifesto {
@@ -409,7 +409,7 @@ p {
   padding: 70px 12%;
 }
 .manifesto-copy p {
-  font-size: 14px;
+  font-size: 17px;
   max-width: 330px;
 }
 .steps {
@@ -423,13 +423,13 @@ p {
   padding-top: 20px;
 }
 .step span {
-  font: 13px monospace;
+  font: 16px monospace;
 }
 .step h3 {
   margin: 30px 0 15px;
 }
 .step p {
-  font-size: 14px;
+  font-size: 17px;
   opacity: 0.8;
 }
 .cta {
@@ -446,7 +446,7 @@ p {
 }
 .cta p {
   max-width: 300px;
-  font-size: 14px;
+  font-size: 17px;
 }
 .cta .button {
   margin-top: 10px;
@@ -471,7 +471,7 @@ footer {
 }
 .footer-top > a:last-child {
   border-bottom: 1px solid;
-  font-size: 13px;
+  font-size: 16px;
 }
 .footer-bottom {
   border-top: 1px solid #ffffff35;
@@ -479,7 +479,7 @@ footer {
   display: flex;
   gap: 25px;
   justify-content: space-between;
-  font: 10px/1.6 monospace;
+  font: 14px/1.6 monospace;
 }
 .page-head {
   padding: 60px 4.5% 40px;
@@ -491,7 +491,7 @@ footer {
 }
 .page-head p {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 17px;
 }
 .catalog {
   padding: 40px 4.5% 80px;
@@ -517,7 +517,7 @@ footer {
   gap: 15px;
   align-items: center;
   margin-bottom: 25px;
-  font-size: 12px;
+  font-size: 15px;
 }
 .results-toolbar select {
   padding: 8px;
@@ -539,7 +539,7 @@ footer {
   margin-bottom: 10px;
 }
 .empty p {
-  font-size: 14px;
+  font-size: 17px;
 }
 .auth {
   display: grid;
@@ -562,7 +562,7 @@ footer {
   max-width: 460px;
 }
 .form-stack p {
-  font-size: 12px;
+  font-size: 15px;
   margin: 0;
 }
 .form-stack .row {
@@ -572,17 +572,17 @@ footer {
 }
 .error {
   color: #9a271b;
-  font-size: 13px;
+  font-size: 16px;
 }
 .hint {
-  font-size: 12px;
+  font-size: 15px;
   opacity: 0.8;
 }
 .detail {
   padding: 30px 4.5% 80px;
 }
 .breadcrumbs {
-  font-size: 12px;
+  font-size: 15px;
   margin-bottom: 25px;
 }
 .detail-photo {
@@ -605,7 +605,7 @@ footer {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   margin: 25px 0;
-  font-size: 15px;
+  font-size: 16px;
   flex-wrap: wrap;
 }
 .booking {
@@ -653,10 +653,10 @@ footer {
 }
 .visit p {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
 }
 .status {
-  font: 11px monospace;
+  font: 14px monospace;
   background: var(--cream);
   padding: 5px 10px;
   display: inline-block;
@@ -699,7 +699,7 @@ footer {
   z-index: 50;
   max-width: 90vw;
   display: none;
-  font-size: 13px;
+  font-size: 16px;
 }
 dialog {
   border: 1px solid var(--ink);
@@ -732,7 +732,7 @@ main {
   min-height: 65vh;
 }
 .demo-note {
-  font: 10px monospace;
+  font: 14px monospace;
   opacity: 0.7;
   margin-top: 15px;
 }
@@ -792,7 +792,7 @@ main {
   }
   .specs {
     gap: 8px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .detail-layout {
     gap: 30px;
@@ -818,7 +818,7 @@ main {
   }
   .account-link {
     margin-left: auto;
-    font-size: 11px;
+    font-size: 14px;
   }
   .menu-toggle {
     display: block;
@@ -882,7 +882,7 @@ main {
     gap: 15px;
   }
   .section-top .text-link {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 12px;
   }
   .grid {
@@ -892,7 +892,7 @@ main {
     height: 290px;
   }
   .specs {
-    font-size: 12px;
+    font-size: 15px;
     gap: 16px;
   }
   .manifesto {
@@ -955,7 +955,7 @@ main {
     height: 280px;
   }
   .results-toolbar {
-    font-size: 11px;
+    font-size: 14px;
   }
   .auth {
     grid-template-columns: 1fr;
@@ -1025,20 +1025,12 @@ header .brand img {
   margin-top: 45px;
 }
 
-.demo-banner {
-  max-width: none;
-  margin: 0;
-  padding: 10px 4.5%;
-  background: #eee8cd;
-  font-size: 11px;
-  text-align: center;
-}
 .demo-panel {
   border: 1px solid var(--line);
   padding: 18px;
   margin-bottom: 24px;
 }
 .demo-panel p {
-  font-size: 12px;
+  font-size: 15px;
   margin: 8px 0 16px;
 }
