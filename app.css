@@ -19,7 +19,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font:
-    16px/1.6 "DM Sans",
+    18px/1.6 "DM Sans",
     Arial,
     sans-serif;
 }
@@ -97,7 +97,7 @@ nav {
   display: flex;
   gap: 32px;
   margin: auto;
-  font-size: 16px;
+  font-size: 18px;
 }
 nav a:hover,
 nav a[aria-current="page"] {
@@ -107,13 +107,13 @@ nav a[aria-current="page"] {
 .account-link {
   border-bottom: 1px solid;
   padding: 7px 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .menu-toggle {
   display: none;
 }
 .eyebrow {
-  font: 14px/1.5 monospace;
+  font: 16px/1.5 monospace;
   letter-spacing: 1.8px;
   text-transform: uppercase;
   margin-bottom: 22px;
@@ -178,7 +178,7 @@ p {
   color: var(--ink);
 }
 .hero-copy p {
-  font-size: 17px;
+  font-size: 18px;
   max-width: 310px;
   margin-bottom: 28px;
 }
@@ -200,11 +200,11 @@ p {
   right: 30px;
   background: var(--cream);
   padding: 16px 22px;
-  font: 14px/1.7 monospace;
+  font: 16px/1.7 monospace;
   max-width: 185px;
 }
 .hero-number {
-  font: 14px monospace;
+  font: 16px monospace;
   position: absolute;
   bottom: 30px;
   left: 9%;
@@ -219,7 +219,7 @@ p {
   align-items: center;
   gap: 32px;
   border: 1px solid var(--dark);
-  font-size: 16px;
+  font-size: 18px;
   min-height: 48px;
   transition:
     background 0.2s,
@@ -262,7 +262,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
 }
 .field input,
@@ -302,7 +302,7 @@ p {
 .text-link {
   border-bottom: 1px solid;
   padding-bottom: 6px;
-  font-size: 16px;
+  font-size: 18px;
   white-space: nowrap;
 }
 .grid {
@@ -334,7 +334,7 @@ p {
   left: 15px;
   padding: 4px 11px;
   background: var(--paper);
-  font: 14px/1.8 monospace;
+  font: 16px/1.8 monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -357,7 +357,7 @@ p {
   border-bottom: 1px solid var(--line);
 }
 .location {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   opacity: 0.75;
@@ -369,7 +369,7 @@ p {
 .specs {
   display: flex;
   gap: 14px;
-  font-size: 15px;
+  font-size: 17px;
   opacity: 0.8;
 }
 .price-row {
@@ -386,7 +386,7 @@ p {
   font-size: 22px;
 }
 .price-row small {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 .manifesto {
@@ -409,7 +409,7 @@ p {
   padding: 70px 12%;
 }
 .manifesto-copy p {
-  font-size: 17px;
+  font-size: 18px;
   max-width: 330px;
 }
 .steps {
@@ -423,13 +423,13 @@ p {
   padding-top: 20px;
 }
 .step span {
-  font: 16px monospace;
+  font: 18px monospace;
 }
 .step h3 {
   margin: 30px 0 15px;
 }
 .step p {
-  font-size: 17px;
+  font-size: 18px;
   opacity: 0.8;
 }
 .cta {
@@ -446,7 +446,7 @@ p {
 }
 .cta p {
   max-width: 300px;
-  font-size: 17px;
+  font-size: 18px;
 }
 .cta .button {
   margin-top: 10px;
@@ -471,7 +471,7 @@ footer {
 }
 .footer-top > a:last-child {
   border-bottom: 1px solid;
-  font-size: 16px;
+  font-size: 18px;
 }
 .footer-bottom {
   border-top: 1px solid #ffffff35;
@@ -479,7 +479,7 @@ footer {
   display: flex;
   gap: 25px;
   justify-content: space-between;
-  font: 14px/1.6 monospace;
+  font: 16px/1.6 monospace;
 }
 .page-head {
   padding: 60px 4.5% 40px;
@@ -491,7 +491,7 @@ footer {
 }
 .page-head p {
   margin-bottom: 0;
-  font-size: 17px;
+  font-size: 18px;
 }
 .catalog {
   padding: 40px 4.5% 80px;
@@ -517,7 +517,7 @@ footer {
   gap: 15px;
   align-items: center;
   margin-bottom: 25px;
-  font-size: 15px;
+  font-size: 17px;
 }
 .results-toolbar select {
   padding: 8px;
@@ -539,7 +539,7 @@ footer {
   margin-bottom: 10px;
 }
 .empty p {
-  font-size: 17px;
+  font-size: 18px;
 }
 .auth {
   display: grid;
@@ -562,7 +562,7 @@ footer {
   max-width: 460px;
 }
 .form-stack p {
-  font-size: 15px;
+  font-size: 17px;
   margin: 0;
 }
 .form-stack .row {
@@ -572,17 +572,17 @@ footer {
 }
 .error {
   color: #9a271b;
-  font-size: 16px;
+  font-size: 18px;
 }
 .hint {
-  font-size: 15px;
+  font-size: 17px;
   opacity: 0.8;
 }
 .detail {
   padding: 30px 4.5% 80px;
 }
 .breadcrumbs {
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 25px;
 }
 .detail-photo {
@@ -605,7 +605,7 @@ footer {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   margin: 25px 0;
-  font-size: 16px;
+  font-size: 18px;
   flex-wrap: wrap;
 }
 .booking {
@@ -653,10 +653,10 @@ footer {
 }
 .visit p {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .status {
-  font: 14px monospace;
+  font: 16px monospace;
   background: var(--cream);
   padding: 5px 10px;
   display: inline-block;
@@ -699,7 +699,7 @@ footer {
   z-index: 50;
   max-width: 90vw;
   display: none;
-  font-size: 16px;
+  font-size: 18px;
 }
 dialog {
   border: 1px solid var(--ink);
@@ -726,13 +726,13 @@ dialog::backdrop {
   background: var(--cream);
   padding: 18px;
   margin: 20px 0;
-  font-size: 17px;
+  font-size: 18px;
 }
 main {
   min-height: 65vh;
 }
 .demo-note {
-  font: 14px monospace;
+  font: 16px monospace;
   opacity: 0.7;
   margin-top: 15px;
 }
@@ -792,7 +792,7 @@ main {
   }
   .specs {
     gap: 8px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .detail-layout {
     gap: 30px;
@@ -818,7 +818,7 @@ main {
   }
   .account-link {
     margin-left: auto;
-    font-size: 14px;
+    font-size: 16px;
   }
   .menu-toggle {
     display: block;
@@ -882,7 +882,7 @@ main {
     gap: 15px;
   }
   .section-top .text-link {
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 12px;
   }
   .grid {
@@ -892,7 +892,7 @@ main {
     height: 290px;
   }
   .specs {
-    font-size: 15px;
+    font-size: 17px;
     gap: 16px;
   }
   .manifesto {
@@ -955,7 +955,7 @@ main {
     height: 280px;
   }
   .results-toolbar {
-    font-size: 14px;
+    font-size: 16px;
   }
   .auth {
     grid-template-columns: 1fr;
@@ -1031,6 +1031,232 @@ header .brand img {
   margin-bottom: 24px;
 }
 .demo-panel p {
-  font-size: 15px;
+  font-size: 17px;
   margin: 8px 0 16px;
 }
+
+/* Rodapé: endereço, contato e navegação em uma composição aberta. */
+.site-footer {
+  padding: 64px 4.5% 24px;
+}
+.site-footer .footer-top {
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid #ffffff35;
+}
+.footer-signature {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.site-footer .footer-signature .brand {
+  font-size: 48px;
+  letter-spacing: -2px;
+  gap: 16px;
+}
+.footer-signature .brand span {
+  font:
+    32px Arial,
+    sans-serif;
+  color: var(--yellow);
+}
+.site-footer .footer-signature p {
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 0;
+  color: #e2e5d6;
+}
+.site-footer .footer-top .footer-invite {
+  font-size: 22px;
+  line-height: 1.45;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border: 0;
+}
+.footer-invite > span {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid #ffffff50;
+  border-radius: 50%;
+  font:
+    30px Arial,
+    sans-serif;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.footer-invite:hover > span {
+  background: var(--yellow);
+  color: var(--ink);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.15fr 1fr 1fr;
+  gap: 38px;
+  padding: 44px 0 46px;
+}
+.footer-grid > section {
+  min-width: 0;
+}
+.footer-label {
+  font: 14px/1.6 monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin: 0 0 22px;
+}
+.footer-grid address {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.footer-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #ffffff50;
+  padding-bottom: 5px;
+  font-size: 17px;
+}
+.footer-contact-link {
+  display: block;
+  width: fit-content;
+  font-size: 18px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.footer-hours {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 18px 0 0;
+  color: #dce1ce;
+}
+.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  font-size: 18px;
+}
+.footer-grid a:hover {
+  color: var(--yellow);
+}
+.footer-social-copy {
+  font-size: 18px;
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+.footer-instagram {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: fit-content;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.footer-instagram svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.footer-instagram strong {
+  font-size: 18px;
+  font-weight: 500;
+}
+.social-arrow {
+  font:
+    25px Arial,
+    sans-serif;
+  margin-left: 5px;
+}
+.site-footer .footer-bottom {
+  font:
+    15px/1.6 "DM Sans",
+    Arial,
+    sans-serif;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #dce1ce;
+}
+.site-footer a:focus-visible {
+  outline-color: var(--yellow);
+}
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 50px;
+  }
+  .footer-signature {
+    gap: 25px;
+  }
+}
+@media (max-width: 650px) {
+  .site-footer {
+    padding: 44px 5% 22px;
+  }
+  .site-footer .footer-top {
+    align-items: flex-start;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+  .footer-signature {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px 30px;
+  }
+  .site-footer .footer-top .footer-invite {
+    font-size: 20px;
+    gap: 22px;
+  }
+  .footer-grid {
+    padding: 32px 0;
+    gap: 30px 22px;
+  }
+  .footer-label {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+  .footer-grid address,
+  .footer-contact-link,
+  .footer-links,
+  .footer-social-copy {
+    font-size: 17px;
+  }
+  .footer-instagram strong {
+    font-size: 17px;
+  }
+  .footer-hours,
+  .footer-text-link {
+    font-size: 16px;
+  }
+  .site-footer .footer-bottom {
+    font-size: 15px;
+  }
+  .site-footer .footer-bottom > span:nth-child(2) {
+    flex-basis: 100%;
+    order: 3;
+  }
+}
+@media (max-width: 420px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid > section + section {
+    border-top: 1px solid #ffffff25;
+    padding-top: 26px;
+  }
+  .footer-label {
+    font-size: 15px;
+  }
+}
+
+.site-footer .footer-arrow-icon { width: 22px; height: 22px; display: inline-block; vertical-align: middle; flex-shrink: 0; }
+.site-footer .brand .footer-arrow-icon { width: 30px; height: 30px; }
