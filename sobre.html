@@ -1,437 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Domus | Sobre</title>
-
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    >
-
-    <!-- CSS geral do projeto -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- CSS do cabeçalho -->
-    <link rel="stylesheet" href="header.css">
-
-    <!-- CSS do rodapé -->
-    <link rel="stylesheet" href="footer.css">
-
-    <!-- CSS exclusivo da página Sobre -->
-    <link rel="stylesheet" href="sobre.css">
-</head>
-
-<body>
-
-<div class="site">
-
-    <!-- =========================================================
-         CABEÇALHO
-         ========================================================= -->
-
-    <header class="topbar">
-
-        <a href="indexDomus.html" class="brand">
-            <img src="logo.png" alt="DOMUS">
-        </a>
-
-        <nav class="nav" aria-label="Navegação principal">
-
-            <a href="indexDomus.html">Comprar</a>
-
-            <a href="indexDomus.html">Alugar</a>
-
-            <a href="indexDomus.html">Anunciar imóvel</a>
-
-            <a href="sobre.html" class="active">Sobre</a>
-
-        </nav>
-
-        <a href="loginDomus.html" class="client">
-
-            <span>Área do cliente</span>
-
-            <span class="hamb" aria-hidden="true">
-                ☰
-            </span>
-
-        </a>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#394829" />
+    <meta
+      name="description"
+      content="Domus. Encontre um espaço que acompanha o seu jeito de viver."
+    />
+    <title>Domus — Espaços para viver</title>
+    <link rel="stylesheet" href="/app.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Pular para o conteúdo</a>
+    <header>
+      <a class="brand" href="/#/" aria-label="Domus, início"
+        ><img src="/assets/logo.png" alt="DOMUS" /></a
+      ><button
+        class="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav aria-label="Navegação principal">
+        <a href="/#/imoveis">Encontrar imóvel</a><a href="/#/sobre">A Domus</a
+        ><a href="/#/contato">Contato</a>
+      </nav>
+      <a class="account-link" href="/#/login">Minha conta →</a>
     </header>
-
-
-    <!-- =========================================================
-         CONTEÚDO PRINCIPAL
-         ========================================================= -->
-
-    <main class="sobre-page">
-
-        <!-- =====================================================
-             HERO
-             ===================================================== -->
-
-        <section class="sobre-hero">
-
-            <!-- LADO ESQUERDO -->
-
-            <div class="sobre-texto">
-
-                <div class="sobre-breadcrumb">
-                    HOME&nbsp;&nbsp; / &nbsp;&nbsp;SOBRE A DOMUS
-                </div>
-
-                <h1>
-                    SOBRE
-                    <strong>A DOMUS.</strong>
-                </h1>
-
-                <h2>
-                    MUITO ALÉM DE PAREDES.
-                </h2>
-
-                <p>
-                    Acreditamos que imóveis vão além da função.
-                    São espaços que carregam histórias, promovem
-                    encontros e transformam a forma como vivemos
-                    a cidade.
-                </p>
-
-                <p>
-                    Na Domus, unimos curadoria, estética e
-                    autenticidade para conectar pessoas a lugares
-                    que fazem sentido.
-                </p>
-
-                <a href="#valores" class="sobre-link">
-                    CONHEÇA NOSSOS VALORES
-                    <span>→</span>
-                </a>
-
-                <div class="sobre-vertical">
-                    ARQUITETURA&nbsp;&nbsp;&nbsp;
-                    ESTÉTICA&nbsp;&nbsp;&nbsp;
-                    CONEXÃO
-                </div>
-
-            </div>
-
-
-            <!-- LADO DIREITO -->
-
-            <div
-                class="sobre-imagem"
-                role="img"
-                aria-label="Imagem de arquitetura contemporânea"
-            ></div>
-
-        </section>
-
-
-        <!-- =====================================================
-             VALORES + NÚMEROS
-             ===================================================== -->
-
-        <section class="sobre-informacoes" id="valores">
-
-            <!-- VALORES -->
-
-            <div class="valores">
-
-                <div class="secao-titulo">
-                    NOSSOS VALORES
-                </div>
-
-                <div class="valores-grid">
-
-                    <article class="valor">
-
-                        <span class="valor-numero">
-                            01.
-                        </span>
-
-                        <h3>
-                            AUTENTICIDADE
-                        </h3>
-
-                        <p>
-                            Selecionamos imóveis com história
-                            e identidade própria.
-                        </p>
-
-                    </article>
-
-
-                    <article class="valor">
-
-                        <span class="valor-numero">
-                            02.
-                        </span>
-
-                        <h3>
-                            ESTÉTICA
-                        </h3>
-
-                        <p>
-                            Valorizamos arquitetura, design
-                            e o impacto visual dos espaços.
-                        </p>
-
-                    </article>
-
-
-                    <article class="valor">
-
-                        <span class="valor-numero">
-                            03.
-                        </span>
-
-                        <h3>
-                            CONEXÃO
-                        </h3>
-
-                        <p>
-                            Acreditamos em relações transparentes
-                            e atendimento próximo.
-                        </p>
-
-                    </article>
-
-
-                    <article class="valor">
-
-                        <span class="valor-numero">
-                            04.
-                        </span>
-
-                        <h3>
-                            SOLIDEZ
-                        </h3>
-
-                        <p>
-                            Segurança em cada etapa para
-                            decisões confiantes.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-
-            <!-- NÚMEROS -->
-
-            <div class="numeros">
-
-                <div class="numero">
-
-                    <strong>
-                        +8
-                    </strong>
-
-                    <span>
-                        ANOS DE<br>
-                        EXPERIÊNCIA
-                    </span>
-
-                </div>
-
-
-                <div class="numero">
-
-                    <strong>
-                        +320
-                    </strong>
-
-                    <span>
-                        IMÓVEIS<br>
-                        SELECIONADOS
-                    </span>
-
-                </div>
-
-
-                <div class="numero">
-
-                    <strong>
-                        +2.1K
-                    </strong>
-
-                    <span>
-                        CLIENTES<br>
-                        ATENDIDOS
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================================================
-         RODAPÉ
-         ========================================================= -->
-
+    <main id="main" tabindex="-1"></main>
     <footer>
-
-        <div class="footer-grid">
-
-            <div class="footer-col footer-brand">
-
-                <div class="logo-text">
-                    DOMUS
-                </div>
-
-                <p>
-                    A Domus Imobiliária é especializada
-                    em compra, venda e locação de imóveis
-                    residenciais e comerciais.
-                </p>
-
-                <div class="social-links">
-
-                    <a
-                        href="#"
-                        aria-label="Instagram"
-                    >
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a
-                        href="#"
-                        aria-label="Facebook"
-                    >
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <a
-                        href="#"
-                        aria-label="LinkedIn"
-                    >
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-
-                    <a
-                        href="#"
-                        aria-label="YouTube"
-                    >
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-col">
-
-                <h4>
-                    Institucional
-                </h4>
-
-                <ul>
-
-                    <li>
-                        <a href="indexDomus.html">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="sobre.html">
-                            Sobre nós
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contato.html">
-                            Contato
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="footer-col">
-
-                <h4>
-                    Horário
-                </h4>
-
-                <ul>
-
-                    <li>
-                        Segunda a Sexta: 08h às 18h
-                    </li>
-
-                    <li>
-                        Sábado: 09h às 13h
-                    </li>
-
-                    <li>
-                        Domingo: Fechado
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="footer-col">
-
-                <h4>
-                    Contato
-                </h4>
-
-                <ul class="footer-contact">
-
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-
-                        Av. Paulista, 1500 —
-                        São Paulo/SP
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-phone"></i>
-
-                        (11) 3000-1234
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-
-                        contato@domusimobiliaria.com.br
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            &copy; 2026
-            <span>Domus Imobiliária</span>.
-            Todos os direitos reservados.
-
-        </div>
-
+      <div class="footer-top">
+        <a class="brand" href="/#/">DOMUS →</a>
+        <p>O seu próximo capítulo<br />começa com um espaço.</p>
+        <a href="/#/imoveis">Encontre o seu →</a>
+      </div>
+      <div class="footer-bottom">
+        <span>DOMUS © <span id="year"></span></span
+        ><span>Projeto acadêmico · Imóveis demonstrativos</span
+        ><a href="/#/privacidade">Privacidade</a
+        ><a href="/#/anunciar">Anunciar um imóvel →</a>
+      </div>
     </footer>
-
-</div>
-
-</body>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <dialog id="modal">
+      <button class="close" aria-label="Fechar">×</button>
+      <div id="modal-content"></div>
+    </dialog>
+  </body>
 </html>
