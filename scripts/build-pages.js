@@ -13,7 +13,7 @@ const root = fileURLToPath(new URL("../", import.meta.url)),
   out = resolve(root, "dist");
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
-for (const f of ["index.html", "app.js", "app.css", "demo-store.js"])
+for (const f of ["index.html", "app.js", "app.css", "demo-store.js", "usuarios-demo.json"])
   copyFileSync(resolve(root, "web", f), resolve(out, f));
 cpSync(resolve(root, "web/assets"), resolve(out, "assets"), {
   recursive: true,
