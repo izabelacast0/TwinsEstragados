@@ -1,6 +1,7 @@
 // Somente demonstração: dados locais não são autenticação nem registros compartilhados.
 export function createDemoStore({
   catalog,
+  accounts = [],
   storage = localStorage,
   session = sessionStorage,
   cryptoApi = crypto,
@@ -110,6 +111,20 @@ export function createDemoStore({
       required(demo, "Perfil indisponível.");
       session.setItem(key, String(demo.id));
       return { ok: true };
+    }
+    // Contas públicas de apresentação; não autenticação de produção.
+    if (path === "login") {
+      const login = String(data.email || "").trim().toLowerCase();
+      const preset = accounts.find((a) => a.login === login || a.email === login);
+      if (preset) {
+        required(String(data.password || "") === preset.password, "Usuário ou senha incorretos.");
+        const existing = s.users.find((a) => a.id === preset.id);
+        required(existing, "Perfil indisponível.");
+        Object.assign(existing, cleanUser(preset));
+        save(s);
+        session.setItem(key, String(preset.id));
+        return { ok: true };
+      }
     }
     if (["register", "login", "reset"].includes(path)) {
       const email = String(data.email || "")
@@ -281,6 +296,7 @@ export function createDemoStore({
       );
       v.status = data.status;
     } else if (path === "listing") {
+      required(u.role === "corretor" || u.role === "administrador", "Entre como corretor para anunciar imóveis.");
       const old = data.id
         ? s.properties.find((p) => p.id === data.id && p.owner === u.id)
         : null;

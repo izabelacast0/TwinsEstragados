@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "login": "cliente",
+    "name": "Cliente Demo",
+    "email": "cliente@domus.example",
+    "role": "cliente",
+    "password": "1234567"
+  },
+  {
+    "id": 2,
+    "login": "corretor",
+    "name": "Corretora Demo",
+    "email": "corretora@domus.example",
+    "role": "corretor",
+    "password": "1234567"
+  },
+  {
+    "id": 3,
+    "login": "admin",
+    "name": "Admin Demo",
+    "email": "admin@domus.example",
+    "role": "administrador",
+    "password": "1234567"
+  }
+]
